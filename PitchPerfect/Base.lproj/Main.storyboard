@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record Sounds View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -22,35 +23,46 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkn-3Y-oyi" userLabel="recordButton">
-                                <rect key="frame" x="137.5" y="283" width="100" height="100"/>
-                                <state key="normal" image="speakerIconSet"/>
+                                <rect key="frame" x="110" y="256" width="155" height="155"/>
+                                <state key="normal" image="RecordButton"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YyW-RL-w0t"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVo-ue-u9f" userLabel="progressLabel">
-                                <rect key="frame" x="133.5" y="391" width="107" height="21"/>
+                                <rect key="frame" x="134" y="419" width="107" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oa1-Ys-aWA" userLabel="stopButton">
-                                <rect key="frame" x="162" y="418" width="50" height="50"/>
-                                <state key="normal" image="stopIconSet"/>
+                                <rect key="frame" x="147" y="472" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="Dkk-Jo-D1q"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="105" id="FGL-bc-ulz"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="105" id="I1y-j3-PT8"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="105" id="XsP-qC-lya"/>
+                                    <constraint firstAttribute="height" constant="80" id="Yxz-e6-q6F"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="105" id="ZCV-Tk-Sgs"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="fN8-XL-Z13"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="rbm-L0-ldt"/>
+                                    <constraint firstAttribute="width" constant="80" id="wtu-PP-aHc"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="z4q-RZ-POd"/>
+                                </constraints>
+                                <state key="normal" image="StopButton"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Qq-Cr-sUe"/>
-                                    <segue destination="4L4-03-I5R" kind="show" id="eul-a5-Boy"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Gkn-3Y-oyi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Cf-be-p8R"/>
-                            <constraint firstItem="oa1-Ys-aWA" firstAttribute="top" secondItem="JVo-ue-u9f" secondAttribute="bottom" constant="6" id="Bzh-MU-ffY"/>
-                            <constraint firstItem="oa1-Ys-aWA" firstAttribute="centerX" secondItem="JVo-ue-u9f" secondAttribute="centerX" id="O5X-R2-fgQ"/>
+                            <constraint firstItem="oa1-Ys-aWA" firstAttribute="centerX" secondItem="JVo-ue-u9f" secondAttribute="centerX" id="Ehf-TQ-Vnk"/>
                             <constraint firstItem="JVo-ue-u9f" firstAttribute="centerX" secondItem="Gkn-3Y-oyi" secondAttribute="centerX" id="bbd-8L-hum"/>
                             <constraint firstItem="JVo-ue-u9f" firstAttribute="top" secondItem="Gkn-3Y-oyi" secondAttribute="bottom" constant="8" id="dHo-Sj-1aP"/>
                             <constraint firstItem="Gkn-3Y-oyi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ev8-Zb-eTE"/>
+                            <constraint firstItem="oa1-Ys-aWA" firstAttribute="top" secondItem="JVo-ue-u9f" secondAttribute="bottom" constant="32" id="o07-sd-lyN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Unq-9c-kXS"/>
@@ -58,16 +70,17 @@
                         <outlet property="recordButtonLabel" destination="Gkn-3Y-oyi" id="Szu-Q3-NYz"/>
                         <outlet property="statusLabel" destination="JVo-ue-u9f" id="3Fk-Pg-xZ7"/>
                         <outlet property="stopRecordButton" destination="oa1-Ys-aWA" id="qv3-Jz-dK0"/>
+                        <segue destination="4L4-03-I5R" kind="show" identifier="stopRecordingSegue" id="NtS-dC-IrM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="596" y="88"/>
+            <point key="canvasLocation" x="596" y="87.706146926536732"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="dtN-00-AFU">
             <objects>
-                <viewController id="4L4-03-I5R" sceneMemberID="viewController">
+                <viewController id="4L4-03-I5R" customClass="PlaySoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YRP-rk-NDy"/>
                         <viewControllerLayoutGuide type="bottom" id="kbU-Kg-WJx"/>
@@ -75,7 +88,23 @@
                     <view key="view" contentMode="scaleToFill" id="h4O-DA-qso">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hHD-uo-2iH" userLabel="Vertical Stack View">
+                                <rect key="frame" x="16" y="64" width="343" height="603"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rzw-VC-Ye4">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="603"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="hHD-uo-2iH" secondAttribute="trailing" id="PAm-g7-QDT"/>
+                            <constraint firstItem="kbU-Kg-WJx" firstAttribute="top" secondItem="hHD-uo-2iH" secondAttribute="bottom" id="Vkp-S4-ds7"/>
+                            <constraint firstItem="hHD-uo-2iH" firstAttribute="top" secondItem="YRP-rk-NDy" secondAttribute="bottom" id="yEI-ph-cs5"/>
+                            <constraint firstItem="hHD-uo-2iH" firstAttribute="leading" secondItem="h4O-DA-qso" secondAttribute="leadingMargin" id="yho-id-Tap"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ur2-oz-vrB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -102,7 +131,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="speakerIconSet" width="100" height="100"/>
-        <image name="stopIconSet" width="50" height="50"/>
+        <image name="RecordButton" width="155" height="155"/>
+        <image name="StopButton" width="155" height="155"/>
     </resources>
 </document>
