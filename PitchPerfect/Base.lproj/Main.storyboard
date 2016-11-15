@@ -24,7 +24,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gkn-3Y-oyi" userLabel="recordButton">
                                 <rect key="frame" x="110" y="256" width="155" height="155"/>
-                                <state key="normal" image="RecordButton"/>
+                                <state key="normal" image="RecordButtonSet"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YyW-RL-w0t"/>
                                 </connections>
@@ -49,7 +49,7 @@
                                     <constraint firstAttribute="width" constant="80" id="wtu-PP-aHc"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="80" id="z4q-RZ-POd"/>
                                 </constraints>
-                                <state key="normal" image="StopButton"/>
+                                <state key="normal" image="StopButtonSet"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Qq-Cr-sUe"/>
                                 </connections>
@@ -92,8 +92,44 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hHD-uo-2iH" userLabel="Vertical Stack View">
                                 <rect key="frame" x="16" y="64" width="343" height="603"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rzw-VC-Ye4">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="603"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rzw-VC-Ye4" userLabel="Horizontal Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="201"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cya-hf-caT" userLabel="Snail Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="201"/>
+                                                <state key="normal" image="SlowSet"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coY-uF-Xar" userLabel="Rabbit Button">
+                                                <rect key="frame" x="171.5" y="0.0" width="171.5" height="201"/>
+                                                <state key="normal" image="FastSet"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gTq-DA-TXW" userLabel="Horizontal Stack View">
+                                        <rect key="frame" x="0.0" y="201" width="343" height="201"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNb-AT-vuc" userLabel="Squirrel Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="201"/>
+                                                <state key="normal" image="HighPitchSet"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dT-VD-9an" userLabel="Darth Vader">
+                                                <rect key="frame" x="171.5" y="0.0" width="171.5" height="201"/>
+                                                <state key="normal" image="LowPitchSet"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="G4M-gc-MwK" userLabel="Horizontal Stack View">
+                                        <rect key="frame" x="0.0" y="402" width="343" height="201"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcq-K6-cYn" userLabel="Bird Button">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.5" height="201"/>
+                                                <state key="normal" image="EchoSet"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKD-4q-wFq">
+                                                <rect key="frame" x="171.5" y="0.0" width="171.5" height="201"/>
+                                                <state key="normal" image="ReverbSet"/>
+                                            </button>
+                                        </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -131,7 +167,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="RecordButton" width="155" height="155"/>
-        <image name="StopButton" width="155" height="155"/>
+        <image name="EchoSet" width="90" height="90"/>
+        <image name="FastSet" width="90" height="90"/>
+        <image name="HighPitchSet" width="90" height="90"/>
+        <image name="LowPitchSet" width="90" height="90"/>
+        <image name="RecordButtonSet" width="155" height="155"/>
+        <image name="ReverbSet" width="90" height="90"/>
+        <image name="SlowSet" width="90" height="90"/>
+        <image name="StopButtonSet" width="155" height="155"/>
     </resources>
 </document>
