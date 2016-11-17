@@ -4,6 +4,7 @@
 //
 //  Created by MICK SOUMPHONPHAKDY on 11/9/16.
 //  Copyright © 2016 MICK SOUMPHONPHAKDY. All rights reserved.
+//  TODO: Incorporate Alexa into this app with skill set to sounds like snoop
 //
 
 import UIKit
