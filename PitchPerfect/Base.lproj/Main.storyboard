@@ -101,36 +101,54 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cya-hf-caT" userLabel="Snail Button">
                                                         <rect key="frame" x="0.0" y="0.0" width="171.5" height="173"/>
                                                         <state key="normal" image="SlowSet"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="4L4-03-I5R" eventType="touchUpInside" id="iNd-kE-IYQ"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coY-uF-Xar" userLabel="Rabbit Button">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coY-uF-Xar" userLabel="Rabbit Button">
                                                         <rect key="frame" x="171.5" y="0.0" width="171.5" height="173"/>
                                                         <state key="normal" image="FastSet"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="4L4-03-I5R" eventType="touchUpInside" id="oOg-pN-bGX"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gTq-DA-TXW" userLabel="Horizontal Stack View">
                                                 <rect key="frame" x="0.0" y="173" width="343" height="173"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNb-AT-vuc" userLabel="Squirrel Button">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNb-AT-vuc" userLabel="Squirrel Button">
                                                         <rect key="frame" x="0.0" y="0.0" width="171.5" height="173"/>
                                                         <state key="normal" image="HighPitchSet"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="4L4-03-I5R" eventType="touchUpInside" id="htC-kk-mmh"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dT-VD-9an" userLabel="Darth Vader">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dT-VD-9an" userLabel="Darth Vader">
                                                         <rect key="frame" x="171.5" y="0.0" width="171.5" height="173"/>
                                                         <state key="normal" image="LowPitchSet"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="4L4-03-I5R" eventType="touchUpInside" id="8k4-LS-dyf"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="G4M-gc-MwK" userLabel="Horizontal Stack View">
                                                 <rect key="frame" x="0.0" y="346" width="343" height="173"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcq-K6-cYn" userLabel="Bird Button">
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcq-K6-cYn" userLabel="Bird Button">
                                                         <rect key="frame" x="0.0" y="0.0" width="171.5" height="173"/>
                                                         <state key="normal" image="EchoSet"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="4L4-03-I5R" eventType="touchUpInside" id="tQm-ln-Lmx"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKD-4q-wFq">
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uKD-4q-wFq" userLabel="Reverb Button">
                                                         <rect key="frame" x="171.5" y="0.0" width="171.5" height="173"/>
                                                         <state key="normal" image="ReverbSet"/>
+                                                        <connections>
+                                                            <action selector="playSoundForButton:" destination="4L4-03-I5R" eventType="touchUpInside" id="kmo-qo-4Ec"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -139,13 +157,16 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SLY-qe-oCH">
                                         <rect key="frame" x="0.0" y="519" width="343" height="64"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L38-zV-CAg">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L38-zV-CAg" userLabel="Stop Button">
                                                 <rect key="frame" x="139.5" y="0.0" width="64" height="64"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="64" id="ElQ-Vw-5GO"/>
                                                     <constraint firstAttribute="width" constant="64" id="pnc-BM-Kub"/>
                                                 </constraints>
                                                 <state key="normal" image="StopButtonSet"/>
+                                                <connections>
+                                                    <action selector="stopButtonPressed:" destination="4L4-03-I5R" eventType="touchUpInside" id="qfZ-3o-L0K"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -160,6 +181,15 @@
                             <constraint firstAttribute="trailingMargin" secondItem="I8f-xL-2bB" secondAttribute="trailing" id="Uie-0R-dQ1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="birdButton" destination="Wcq-K6-cYn" id="lVI-UI-2kY"/>
+                        <outlet property="darthVaderButton" destination="9dT-VD-9an" id="mhz-aG-e92"/>
+                        <outlet property="rabbitButton" destination="coY-uF-Xar" id="VKi-Kv-dfN"/>
+                        <outlet property="reverbButton" destination="uKD-4q-wFq" id="lQM-Zb-cu4"/>
+                        <outlet property="snailButton" destination="cya-hf-caT" id="3QY-ol-l4h"/>
+                        <outlet property="squirrelButton" destination="tNb-AT-vuc" id="463-es-952"/>
+                        <outlet property="stopButton" destination="L38-zV-CAg" id="Pr4-Ge-bUS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ur2-oz-vrB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
