@@ -11,7 +11,6 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
 	
-	
 	// MARK: IBOutlets
 	@IBOutlet weak var snailButton:UIButton!
 	@IBOutlet weak var rabbitButton:UIButton!
@@ -81,6 +80,5 @@ class PlaySoundsViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 		
 	}
-	
 
 }

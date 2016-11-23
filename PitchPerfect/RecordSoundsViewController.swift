@@ -5,13 +5,14 @@
 //  Created by MICK SOUMPHONPHAKDY on 11/9/16.
 //  Copyright © 2016 MICK SOUMPHONPHAKDY. All rights reserved.
 //  TODO: Incorporate Alexa into this app with skill set to sounds like snoop
-//
+//  TODO: Review Size Classes in depth - with regards to size classes and Axis Orientation:
+//  Source: https://discussions.udacity.com/t/pitch-perfect-ui-elements-appear-squished-together/169289/23
+
 
 import UIKit
 import AVFoundation
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
-	
 	
 	// MARK: Properties
 	var audioRecorder: AVAudioRecorder!
@@ -39,7 +40,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
 		// encapsulate button and status label function
 		configureRecordingButton(recording: true)
-		
 		
 		// set the directory path where the recording file will be saved
 		let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
@@ -99,7 +99,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 		}
 		
 	}
-	
 
 }
 
