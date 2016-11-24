@@ -7,6 +7,7 @@
 //  TODO: Incorporate Alexa into this app with skill set to sounds like snoop
 //  TODO: Review Size Classes in depth - with regards to size classes and Axis Orientation:
 //  Source: https://discussions.udacity.com/t/pitch-perfect-ui-elements-appear-squished-together/169289/23
+//  Sourc: UIAlert - http://nshipster.com/uialertcontroller/
 
 
 import UIKit
@@ -75,8 +76,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 	func configureRecordingButton(recording: Bool){
 		
 		statusLabel.text = recording ? "Recording In Progress..." : " Recording has stopped"
-		recordButtonLabel.isEnabled = recording ? false : true
-		stopRecordButton.isEnabled = recording ? true : false
+		recordButtonLabel.isEnabled = !recording
+		stopRecordButton.isEnabled = recording
 		
 	}
 	
@@ -85,7 +86,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 		if flag {
 			performSegue(withIdentifier: "stopRecordingSegue", sender: audioRecorder.url)
 		} else {
-			print("recording was not successful")
+			let alertViewController = UIAlertController.init(title: "Oops", message: "Recording was unsuccessful. Please try again.", preferredStyle: .alert)
+			let OKAction = UIAlertAction.init(title: "OK", style: .default, handler: nil)
+			alertViewController.addAction(OKAction)
+			self.present(alertViewController, animated: true, completion: nil)
+			// Refactor code to create an alert helper
 		}
 		
 	}
